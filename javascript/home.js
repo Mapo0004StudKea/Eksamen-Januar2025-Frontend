@@ -3,7 +3,7 @@ export function loadHome() {
     const app = document.getElementById('app');
     app.innerHTML = `
         <h1>Home Page</h1>
-        <p>Test af 24 timer eksamen, Efterår 2023 - Hotel Booking System</p>
+        <p>Eksamen Januar 2025</p>
         <div>
             <table>
                 <thead>
@@ -23,11 +23,11 @@ export function loadHome() {
                     </tr>
                     <tr>
                         <td>Link til github:</td>
-                        <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Hotel-Frontend">Frontend Link</a></td>
+                        <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Januar2025-Frontend">Frontend Link</a></td>
                     </tr>
                     <tr>
                         <td>Link til github:</td>
-                        <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Hotel-Backend">Backend Link</a></td>
+                        <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Januar2025-Backend">Backend Link</a></td>
                     </tr>
                     <tr>    
                         <td>Link til opgave:</td>
