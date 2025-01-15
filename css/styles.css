@@ -1,0 +1,189 @@
+
+#add-sailboat-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: white solid 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-sailboat-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#update-sailboat-btn {
+    background-color: cornflowerblue;
+    color: white;
+    border: white solid 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#update-sailboat-btn:hover {
+    background-color: lightskyblue; /* Darker green on hover */
+}
+
+#clear-data-btn {
+    background-color: gray;
+    color: white;
+    border: white solid 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#clear-data-btn:hover {
+    background-color: darkgray;
+}
+
+.edit-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background-color: darkorange;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+h1 {
+    text-align: Left;
+    color: #333;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+    text-align: Left;
+    color: #555;
+    font-size: 18px;
+}
+
+/* Container for the form */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: Left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Input and Select Styles */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Button Spacing */
+#add-sailboat-btn,
+#update-sailboat-btn,
+#clear-data-btn {
+    width: 200px;
+}
+
+/* Responsive Design */
+/*@media (max-width: 768px) {*/
+/*    .container {*/
+/*        width: 100%;*/
+/*        padding: 10px;*/
+/*    }*/
+
+/*    table {*/
+/*        font-size: 14px;*/
+/*    }*/
+
+/*    button {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/

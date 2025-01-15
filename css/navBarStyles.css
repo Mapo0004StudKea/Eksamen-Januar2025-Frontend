@@ -1,0 +1,68 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navbar li {
+    margin: 0 10px;
+}
+
+/* Dynamic Content Area */
+.container {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/*!* Responsive Design *!*/
+/*@media (max-width: 768px) {*/
+/*    .navbar ul {*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*    }*/
+/*    .navbar .navbar-toggler {*/
+/*        display: block;*/
+/*        cursor: pointer;*/
+/*        font-size: 18px;*/
+/*        background: none;*/
+/*        border: none;*/
+/*    }*/
+/*    .navbar .collapse {*/
+/*        display: none;*/
+/*    }*/
+/*    .navbar .collapse.show {*/
+/*        display: block;*/
+/*    }*/
+/*}*/
