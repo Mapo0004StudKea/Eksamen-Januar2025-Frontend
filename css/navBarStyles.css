@@ -34,6 +34,17 @@
     padding: 20px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    flex: 1;
+}
+
 /* Footer Styles */
 footer {
     background-color: #f8f9fa;
