@@ -6,7 +6,7 @@ import { loadPizzas } from './pizza.js';
 
 // Function to parse hash and extract route
 function parseHash(hash) {
-    const [route, queryString] = hash.split('?');
+    const [route] = hash.split('?');
     return { route };
 }
 

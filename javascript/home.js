@@ -22,11 +22,11 @@ export function loadHome() {
                         <td>mapo0004@stud.kea.dk</td>
                     </tr>
                     <tr>
-                        <td>Link til github:</td>
+                        <td>Link til gitHub:</td>
                         <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Januar2025-Frontend">Frontend Link</a></td>
                     </tr>
                     <tr>
-                        <td>Link til github:</td>
+                        <td>Link til gitHub:</td>
                         <td><a href="https://github.com/Mapo0004StudKea/Eksamen-Januar2025-Backend">Backend Link</a></td>
                     </tr>
                     <tr>    
