@@ -166,8 +166,6 @@ button:disabled {
 }
 
 /* Button Spacing */
-#add-sailboat-btn,
-#update-sailboat-btn,
 #clear-data-btn {
     width: 200px;
 }

@@ -120,13 +120,17 @@ function handleCreateDelivery() {
 }
 
 function assignDroneToDelivery(deliveryId) {
-    fetch(`http://localhost:8080/api/v1/deliveries/schedule?deliveryId=${deliveryId}`, { method: 'POST' })
+    fetch(`http://localhost:8080/api/v1/deliveries/schedule?deliveryId=${deliveryId}`, {
+        method: 'POST'
+    })
         .then(() => fetchDeliveries())
         .catch(err => console.error('Error assigning drone:', err));
 }
 
 function completeDelivery(deliveryId) {
-    fetch(`http://localhost:8080/api/v1/deliveries/finish?deliveryId=${deliveryId}`, { method: 'POST' })
+    fetch(`http://localhost:8080/api/v1/deliveries/finish?deliveryId=${deliveryId}`, {
+        method: 'POST'
+    })
         .then(() => fetchDeliveries())
         .catch(err => console.error('Error completing delivery:', err));
 }
