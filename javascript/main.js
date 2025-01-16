@@ -21,9 +21,6 @@ function navigate() {
         case 'hotels':
             loadHotels();
             break;
-            case 'rooms':
-                loadRooms();
-                break;
         default:
             loadHome();
     }
