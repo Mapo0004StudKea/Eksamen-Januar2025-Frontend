@@ -41,7 +41,7 @@ function fetchPizzas(page = 0, size = 5) {
                     <td>${pizza.id}</td>
                     <td>${pizza.title}</td>
                     <td>${pizza.description}</td>
-                    <td>${pizza.price}</td>
+                    <td>${pizza.price+" DKK"}</td>
                 `;
                 tbody.appendChild(row);
             });
