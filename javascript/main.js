@@ -1,6 +1,6 @@
 // main.js
 import { loadHome } from './home.js';
-import { loadHotels } from './hotels.js';
+import { loadDeliveries } from './loadDeliveries.js';
 import { loadRooms } from './rooms.js';
 
 // Function to parse hash and extract route
@@ -18,8 +18,8 @@ function navigate() {
         case 'home':
             loadHome();
             break;
-        case 'hotels':
-            loadHotels();
+        case 'deliveries':
+            loadDeliveries();
             break;
         default:
             loadHome();
