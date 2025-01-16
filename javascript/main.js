@@ -1,7 +1,7 @@
 // main.js
 import { loadHome } from './home.js';
 import { loadDeliveries } from './loadDeliveries.js';
-import { loadRooms } from './rooms.js';
+import { loadDrones } from './drones.js';
 
 // Function to parse hash and extract route
 function parseHash(hash) {
@@ -20,6 +20,9 @@ function navigate() {
             break;
         case 'deliveries':
             loadDeliveries();
+            break;
+        case 'drones':
+            loadDrones();
             break;
         default:
             loadHome();

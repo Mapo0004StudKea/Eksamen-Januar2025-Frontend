@@ -17,7 +17,7 @@ export function loadDeliveries() {
                 <tbody>
                     <tr>
                         <td>Pizza ID</td>
-                        <td><input type="number" id="pizzaId" placeholder="Indtast Pizza ID" /></td>
+                        <td><input type="number" id="pizzaId" placeholder="Indtast Pizza ID (1-5)" /></td>
                     </tr>
                     <tr>
                         <td>Adresse</td>
@@ -35,6 +35,7 @@ export function loadDeliveries() {
                 <tr>
                     <th>Id</th>
                     <th>Pizza</th>
+                    <th>Beskrivelse</th>
                     <th>Adresse</th>
                     <th>Status</th>
                     <th>Drone</th>
@@ -72,6 +73,7 @@ function fetchDeliveries() {
                 row.innerHTML = `
                     <td>${delivery.id}</td>
                     <td>${delivery.pizza ? delivery.pizza.title : 'Ikke specificeret'}</td>
+                    <td>${delivery.pizza ? delivery.pizza.description : 'Ikke specificeret'}</td>
                     <td>${delivery.address}</td>
                     <td>${delivery.actualDeliveryTime ? 'Afsluttet' : 'Ikke afsluttet'}</td>
                     <td>${delivery.drone ? delivery.drone.uuid : 'Ingen drone'}</td>

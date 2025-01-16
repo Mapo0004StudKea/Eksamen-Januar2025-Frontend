@@ -45,24 +45,3 @@ footer p {
     margin: 5px 0;
     font-size: 14px;
 }
-
-/*!* Responsive Design *!*/
-/*@media (max-width: 768px) {*/
-/*    .navbar ul {*/
-/*        flex-direction: column;*/
-/*        align-items: flex-start;*/
-/*    }*/
-/*    .navbar .navbar-toggler {*/
-/*        display: block;*/
-/*        cursor: pointer;*/
-/*        font-size: 18px;*/
-/*        background: none;*/
-/*        border: none;*/
-/*    }*/
-/*    .navbar .collapse {*/
-/*        display: none;*/
-/*    }*/
-/*    .navbar .collapse.show {*/
-/*        display: block;*/
-/*    }*/
-/*}*/

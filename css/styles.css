@@ -1,18 +1,4 @@
-
-#add-sailboat-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: white solid 1px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#add-sailboat-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-#update-sailboat-btn {
+#add-delivery-btn {
     background-color: cornflowerblue;
     color: white;
     border: white solid 1px;
@@ -21,11 +7,11 @@
     font-size: 16px;
 }
 
-#update-sailboat-btn:hover {
+#add-delivery-btn:hover {
     background-color: lightskyblue; /* Darker green on hover */
 }
 
-#clear-data-btn {
+#clear-delivery-form-btn {
     background-color: gray;
     color: white;
     border: white solid 1px;
@@ -34,11 +20,11 @@
     font-size: 16px;
 }
 
-#clear-data-btn:hover {
+#clear-delivery-form-btn:hover {
     background-color: darkgray;
 }
 
-.edit-btn {
+.complete-delivery-btn {
     background-color: orange;
     color: white;
     border: none;
@@ -48,11 +34,25 @@
     margin-right: 10px;
 }
 
-.edit-btn:hover {
+.complete-delivery-btn:hover {
     background-color: darkorange;
 }
 
-.delete-btn {
+.disable-drone-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.disable-drone-btn:hover {
+    background-color: darkorange;
+}
+
+.retire-drone-btn {
     background-color: #f44336;
     color: white;
     border: none;
@@ -61,7 +61,7 @@
     font-size: 14px;
 }
 
-.delete-btn:hover {
+.retire-drone-btn:hover {
     background-color: #e53935;
 }
 
@@ -171,19 +171,3 @@ button:disabled {
 #clear-data-btn {
     width: 200px;
 }
-
-/* Responsive Design */
-/*@media (max-width: 768px) {*/
-/*    .container {*/
-/*        width: 100%;*/
-/*        padding: 10px;*/
-/*    }*/
-
-/*    table {*/
-/*        font-size: 14px;*/
-/*    }*/
-
-/*    button {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
