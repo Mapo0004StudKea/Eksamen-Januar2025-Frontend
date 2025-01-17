@@ -85,12 +85,16 @@ function handleCreateDrone() {
         .then(response => {
             if (response.ok) {
                 fetchDrones();
-                console.log('Drone created successfully');
+                console.log('Drone blev oprettet succesfuldt!');
             } else {
+                console.log('Kunne ikke oprette drone. Prøv igen senere.');
                 throw new Error('Failed to create drone');
             }
         })
-        .catch(error => console.error('Error creating drone:', error));
+        .catch(error => {
+            console.error('Error creating drone:', error);
+            console.log('En fejl opstod under oprettelsen af dronen.');
+        });
 }
 
 function updateDroneStatus(droneId, status) {
@@ -105,10 +109,14 @@ function updateDroneStatus(droneId, status) {
         .then(response => {
             if (response.ok) {
                 fetchDrones();
-                console.log(`Drone status updated to ${status}`);
+                console.log(`Drone-status blev opdateret til ${status}.`);
             } else {
+                console.log(`Kunne ikke opdatere drone-status til ${status}. Prøv igen senere.`);
                 throw new Error(`Failed to update drone status to ${status}`);
             }
         })
-        .catch(error => console.error(`Error updating drone status to ${status}:`, error));
+        .catch(error => {
+            console.error(`Error updating drone status to ${status}:`, error);
+            console.log('En fejl opstod under opdateringen af drone-status.');
+        });
 }

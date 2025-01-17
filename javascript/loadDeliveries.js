@@ -105,7 +105,7 @@ function handleCreateDelivery() {
     const address = document.getElementById('address').value;
 
     if (!pizzaId || !address) {
-        alert('Pizza ID og adresse skal udfyldes!');
+        console.log('Pizza ID og adresse skal udfyldes!');
         return;
     }
 
@@ -116,15 +116,15 @@ function handleCreateDelivery() {
             if (response.ok) {
                 fetchDeliveries();
                 clearDeliveryForm();
-                alert('Levering oprettet succesfuldt!');
+                console.log('Levering oprettet succesfuldt!');
             } else {
-                alert('Kunne ikke oprette levering. Tjek input og prøv igen.');
+                console.log('Kunne ikke oprette levering. Tjek input og prøv igen.');
                 throw new Error('Failed to create delivery');
             }
         })
         .catch(error => {
             console.error('Error creating delivery:', error);
-            alert('En fejl opstod under oprettelsen af levering.');
+            console.log('En fejl opstod under oprettelsen af levering.');
         });
 }
 
@@ -135,15 +135,15 @@ function assignDroneToDelivery(deliveryId) {
         .then(response => {
             if (response.ok) {
                 fetchDeliveries();
-                alert('Drone blev succesfuldt tildelt!');
+                console.log('Drone blev succesfuldt tildelt!');
             } else {
-                alert('Kunne ikke tildele drone. Tjek om der er droner ledige.');
+                console.log('Kunne ikke tildele drone. Tjek om der er droner ledige.');
                 throw new Error('Failed to assign drone');
             }
         })
         .catch(err => {
             console.error('Error assigning drone:', err);
-            alert('En fejl opstod under tildelingen af drone.');
+            console.log('En fejl opstod under tildelingen af drone. Se backend for mere info.');
         });
 }
 
@@ -154,15 +154,15 @@ function completeDelivery(deliveryId) {
         .then(response => {
             if (response.ok) {
                 fetchDeliveries();
-                alert('Levering markeret som afsluttet!');
+                console.log('Levering markeret som afsluttet!');
             } else {
-                alert('Kunne ikke afslutte levering. Tjek status for leveringen.');
+                console.log('Kunne ikke afslutte levering. Tjek status for leveringen.');
                 throw new Error('Failed to complete delivery');
             }
         })
         .catch(err => {
             console.error('Error completing delivery:', err);
-            alert('En fejl opstod under afslutningen af levering.');
+            console.log('En fejl opstod under afslutningen af levering.');
         });
 }
 
