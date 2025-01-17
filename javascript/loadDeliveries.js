@@ -65,7 +65,7 @@ function fetchDeliveries() {
         })
         .then(data => {
             const tbody = document.getElementById('deliveries-tbl-rows');
-            tbody.innerHTML = ''; // Ryd eksisterende rækker
+            tbody.innerHTML = ''; 
 
             // Tilføj hver levering til tabellen
             data.forEach(delivery => {
@@ -104,6 +104,11 @@ function handleCreateDelivery() {
     const pizzaId = document.getElementById('pizzaId').value;
     const address = document.getElementById('address').value;
 
+    if (!pizzaId || !address) {
+        alert('Pizza ID og adresse skal udfyldes!');
+        return;
+    }
+
     fetch(`http://localhost:8080/api/v1/deliveries/add?pizzaId=${pizzaId}&address=${encodeURIComponent(address)}`, {
         method: 'POST',
     })
@@ -111,28 +116,54 @@ function handleCreateDelivery() {
             if (response.ok) {
                 fetchDeliveries();
                 clearDeliveryForm();
-                console.log('Delivery created successfully');
+                alert('Levering oprettet succesfuldt!');
             } else {
+                alert('Kunne ikke oprette levering. Tjek input og prøv igen.');
                 throw new Error('Failed to create delivery');
             }
         })
-        .catch(error => console.error('Error creating delivery:', error));
+        .catch(error => {
+            console.error('Error creating delivery:', error);
+            alert('En fejl opstod under oprettelsen af levering.');
+        });
 }
 
 function assignDroneToDelivery(deliveryId) {
     fetch(`http://localhost:8080/api/v1/deliveries/schedule?deliveryId=${deliveryId}`, {
         method: 'POST'
     })
-        .then(() => fetchDeliveries())
-        .catch(err => console.error('Error assigning drone:', err));
+        .then(response => {
+            if (response.ok) {
+                fetchDeliveries();
+                alert('Drone blev succesfuldt tildelt!');
+            } else {
+                alert('Kunne ikke tildele drone. Tjek om der er droner ledige.');
+                throw new Error('Failed to assign drone');
+            }
+        })
+        .catch(err => {
+            console.error('Error assigning drone:', err);
+            alert('En fejl opstod under tildelingen af drone.');
+        });
 }
 
 function completeDelivery(deliveryId) {
     fetch(`http://localhost:8080/api/v1/deliveries/finish?deliveryId=${deliveryId}`, {
         method: 'POST'
     })
-        .then(() => fetchDeliveries())
-        .catch(err => console.error('Error completing delivery:', err));
+        .then(response => {
+            if (response.ok) {
+                fetchDeliveries();
+                alert('Levering markeret som afsluttet!');
+            } else {
+                alert('Kunne ikke afslutte levering. Tjek status for leveringen.');
+                throw new Error('Failed to complete delivery');
+            }
+        })
+        .catch(err => {
+            console.error('Error completing delivery:', err);
+            alert('En fejl opstod under afslutningen af levering.');
+        });
 }
 
 function clearDeliveryForm() {

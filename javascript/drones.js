@@ -41,7 +41,7 @@ function fetchDrones() {
         })
         .then(data => {
             const tbody = document.getElementById('drones-tbl-rows');
-            tbody.innerHTML = ''; // Ryd eksisterende rækker
+            tbody.innerHTML = '';
 
             // Tilføj hver drone til tabellen
             data.forEach(drone => {
@@ -104,7 +104,7 @@ function updateDroneStatus(droneId, status) {
     })
         .then(response => {
             if (response.ok) {
-                fetchDrones(); // Opdater listen
+                fetchDrones();
                 console.log(`Drone status updated to ${status}`);
             } else {
                 throw new Error(`Failed to update drone status to ${status}`);
